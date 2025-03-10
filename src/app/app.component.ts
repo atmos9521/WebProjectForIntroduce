@@ -18,4 +18,8 @@ export class AppComponent {
     { name: 'Date', color: 'Brown' },
     { name: 'Elderberry', color: 'Purple' }
   ];
+
+  toggleAnswer(){
+    console.log("test click!");
+  }
 }

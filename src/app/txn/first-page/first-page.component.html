@@ -1,0 +1,11 @@
+<div class="calendar-container">
+  <h2>日曆</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>選擇日期</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  
+  <p>您選擇的日期是: {{selectedDate | date:'yyyy/MM/dd'}}</p>
+</div>

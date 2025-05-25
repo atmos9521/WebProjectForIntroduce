@@ -25,8 +25,8 @@ export const routes: Routes = [
     { 
         path: '',
         // component: MainPageComponent,
-        loadComponent: () => import('./direct-page/yumeyu-main-page/yumeyu-main-page.component').then(m=>m.YumeyuMainPageComponent),
-        loadChildren: () => import('./direct-page/yumeyu-main-page/yumeyu-routing.module').then(m=>m.YumeyuRoutingModule),
+        loadComponent: () => import('./direct-page/main-page/main-page.component').then(m=>m.MainPageComponent),
+        loadChildren: () => import('./direct-page/main-page/main-routing.module').then(m=>m.MainRoutingModule),
     },
     { path: 'login', component: MainPageComponent },  // 設定 /login 路由，顯示 MainPageComponent
     { path: '**', redirectTo: 'error', pathMatch: 'prefix' },

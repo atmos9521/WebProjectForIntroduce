@@ -1,1 +1,45 @@
-<p>sec-page works!</p>
+<div class="row form-child">
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <label for="monthlyExpense_lbl">每月支出：</label>
+    </div>
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <input id="monthlyExpense" type="text" pInputText [(ngModel)]="monthlyExpense" (blur)="onInputBlur('monthlyExpense')" placeholder="請輸入金額" />
+    </div>
+
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <label for="yearlyExpense_lbl">每年支出：</label>
+    </div>
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <input id="yearlyExpense" type="text" pInputText [(ngModel)]="yearlyExpense" (blur)="onInputBlur('yearlyExpense')" placeholder="請輸入金額" />
+    </div>
+
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <label for="retireExpense_lbl">退休金預計：</label>
+    </div>
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <input id="retireExpense" type="text" pInputText [(ngModel)]="retireExpense" (blur)="onInputBlur('retireExpense')" placeholder="請輸入金額" />
+    </div>
+
+    <hr />
+
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <label for="monthlySave_lbl">每月剩餘儲蓄金額：</label>
+    </div>
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <input id="monthlySave" type="text" pInputText [(ngModel)]="monthlySave" (blur)="onInputBlur('monthlySave')" placeholder="請輸入金額" />
+    </div>
+    
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <label for="yearlySave_lbl">每年剩餘儲蓄金額：</label>
+    </div>
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <input id="yearlySave" type="text" pInputText [(ngModel)]="yearlySave" (blur)="onInputBlur('yearlySave')" placeholder="請輸入金額" />
+    </div>
+    
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <label for="retireYear_lbl">預估退休(年)：</label>
+    </div>
+    <div class="p-field col-sm-12 col-md-6 col-lg-4">
+        <input id="retireYear" type="text" pInputText [(ngModel)]="retireYear" (blur)="onInputBlur('retireYear')" placeholder="預估退休(年)" />
+    </div>
+</div>

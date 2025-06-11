@@ -8,6 +8,7 @@ import { YumeyuModule } from './direct-page/yumeyu-main-page/yumeyu.module';
 import { YumeyuRoutingModule } from './direct-page/yumeyu-main-page/yumeyu-routing.module';
 import { MainRoutingModule } from './direct-page/main-page/main-routing.module';
 import { SharedPrimengModule } from './shared-primeng.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SharedPrimengModule } from './shared-primeng.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     SharedPrimengModule,
     BrowserModule,
     YumeyuModule,

@@ -45,13 +45,6 @@ export class SecPageComponent implements OnInit {
 			this.yearlyExpense = this.retireExpense * 0.04;
 			this.monthlyExpense = this.yearlyExpense / 12;
 		}
-		
-		// 計算預估退休年
-		if(this.yearlySave == 0 || this.retireExpense == 0 ){
-			
-		}else{
-			this.retireYear = this.retireExpense / this.yearlySave;
-		}
         break;
       case 'monthlySave':
         this.yearlySave = this.monthlySave * 12;
@@ -82,11 +75,17 @@ export class SecPageComponent implements OnInit {
 			}else if(this.yearlySave == 0){
 				this.yearlySave = this.monthlySave * 12;
 			}
-			this.retireYear = this.retireExpense / this.yearlySave;
 		}
         break;
       default:
         break;
     }
+
+	// 計算預估退休年
+	if(this.retireYear == 0 || this.retireExpense == 0 || this.yearlySave == 0){
+		
+	}else{
+		this.retireYear = this.retireExpense / this.yearlySave;
+	}
   }
 }

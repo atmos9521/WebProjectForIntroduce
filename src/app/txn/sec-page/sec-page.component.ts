@@ -42,8 +42,15 @@ export class SecPageComponent implements OnInit {
         if(this.monthlyExpense == 0 && this.yearlyExpense == 0){
 			
 		}else {
-			this.yearlyExpense = this.retireYear * 0.04;
+			this.yearlyExpense = this.retireExpense * 0.04;
 			this.monthlyExpense = this.yearlyExpense / 12;
+		}
+		
+		// 計算預估退休年
+		if(this.yearlySave == 0 || this.retireExpense == 0 ){
+			
+		}else{
+			this.retireYear = this.retireExpense / this.yearlySave;
 		}
         break;
       case 'monthlySave':

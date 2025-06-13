@@ -32,21 +32,51 @@ export class SecPageComponent implements OnInit {
     switch (input_id_name) {
       case 'monthlyExpense':
         this.yearlyExpense = this.monthlyExpense * 12;
-        this.retireExpense = this.yearlyExpense * 30; // 假设退休后每年花费30年
+        this.retireExpense = this.yearlyExpense / 0.04;
         break;
       case 'yearlyExpense':
         this.monthlyExpense = this.yearlyExpense / 12;
-        this.retireExpense = this.yearlyExpense * 30; // 假设退休后每年花费30年
+        this.retireExpense = this.yearlyExpense / 0.04;
         break;
       case 'retireExpense':
-        this.monthlyExpense = this.retireExpense / 360; // 假设退休后每月花费
-        this.yearlyExpense = this.retireExpense / 30; // 假设退休后每年花费
+        if(this.monthlyExpense == 0 && this.yearlyExpense == 0){
+			
+		}else {
+			this.yearlyExpense = this.retireYear * 0.04;
+			this.monthlyExpense = this.yearlyExpense / 12;
+		}
         break;
       case 'monthlySave':
         this.yearlySave = this.monthlySave * 12;
+		if(this.yearlySave == 0 || this.retireExpense == 0 ){
+			
+		}else{
+			this.retireYear = this.retireExpense / this.yearlySave;
+		}
         break;
       case 'yearlySave':
         this.monthlySave = this.yearlySave / 12;
+		if(this.yearlySave == 0 || this.retireExpense == 0 ){
+			
+		}else{
+			this.retireYear = this.retireExpense / this.yearlySave;
+		}
+        break;
+      case 'retireYear':
+	    if(this.retireExpense == 0){
+			
+		}
+        else if(this.yearlySave == 0 && this.monthlySave == 0 ){
+			
+		}
+		else{
+			if(this.monthlySave == 0){
+				this.monthlySave = this.yearlySave / 12;
+			}else if(this.yearlySave == 0){
+				this.yearlySave = this.monthlySave * 12;
+			}
+			this.retireYear = this.retireExpense / this.yearlySave;
+		}
         break;
       default:
         break;

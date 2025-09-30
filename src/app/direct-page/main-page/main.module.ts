@@ -7,12 +7,12 @@ import { IntroduceMainPageComponent } from '../../txn/introduce-main-page/introd
 
 @NgModule({
   declarations: [
-    ThirdPageComponent,
-    IntroduceMainPageComponent,
-  ],    
+  ],
   imports: [
     CommonModule,
     MainRoutingModule,
+    ThirdPageComponent,
+    IntroduceMainPageComponent,
   ]
 })
 export class MainModule { }

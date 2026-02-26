@@ -1,0 +1,26 @@
+src/
+ └── app/
+      ├── core/                 # 全域服務 / 攔截器
+      │    ├── services/
+      │    └── guards/
+      │
+      ├── shared/               # 共用UI與imports
+      │    ├── imports/
+      │    │     ├── SharedPrimengModule.ts
+      │    │     ├── form.imports.ts
+      │    │     └── shared.imports.ts
+      │    │
+      │    └── components/
+      │
+      ├── features/             # 各功能模組
+      │    ├── home/
+      │    │     ├── home.component.ts
+      │    │     └── home.component.html
+      │    │
+      │    └── users/
+      │          ├── user-list.component.ts
+      │          └── user-edit.component.ts
+      │
+      ├── app.component.ts
+      ├── app.config.ts
+      └── app.routes.ts

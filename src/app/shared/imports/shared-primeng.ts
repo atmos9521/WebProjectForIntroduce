@@ -18,6 +18,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { MenubarModule } from 'primeng/menubar';
+import { RippleModule } from 'primeng/ripple';
 
 export const PRIMENG_IMPORTS = [
   AutoCompleteModule,
@@ -40,4 +41,5 @@ export const PRIMENG_IMPORTS = [
   CalendarModule,
   RadioButtonModule,
   MenubarModule,
+  RippleModule,
 ];

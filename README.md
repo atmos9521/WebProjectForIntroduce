@@ -33,6 +33,10 @@ angular.json configurations 設定環境
 
 npm install -g @angular/cli
 
+# 樣式
+
+npm install @primeng/themes
+
 # ============================================
 
 # 筆記 tsconfig.json

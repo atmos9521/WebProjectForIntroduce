@@ -10,67 +10,56 @@ import { AvatarModule } from 'primeng/avatar';
   imports: [
     ...SHARED_IMPORTS,
     MegaMenuModule,
-    AvatarModule
+    AvatarModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-items: MegaMenuItem[] | undefined;
+    [x: string]: any;
+    items: MegaMenuItem[] | undefined;
 
     ngOnInit() {
         this.items = [
             {
-                label: 'Company',
-                root: true,
+                label: 'Router',
+                icon: 'pi pi-palette',
                 items: [
                     [
                         {
+                            label: 'RouterLink',
                             items: [
-                                { label: 'Features', icon: 'pi pi-list', subtext: 'Subtext of item' },
-                                { label: 'Customers', icon: 'pi pi-users', subtext: 'Subtext of item' },
-                                { label: 'Case Studies', icon: 'pi pi-file', subtext: 'Subtext of item' }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            items: [
-                                { label: 'Solutions', icon: 'pi pi-shield', subtext: 'Subtext of item' },
-                                { label: 'Faq', icon: 'pi pi-question', subtext: 'Subtext of item' },
-                                { label: 'Library', icon: 'pi pi-search', subtext: 'Subtext of item' }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            items: [
-                                { label: 'Community', icon: 'pi pi-comments', subtext: 'Subtext of item' },
-                                { label: 'Rewards', icon: 'pi pi-star', subtext: 'Subtext of item' },
-                                { label: 'Investors', icon: 'pi pi-globe', subtext: 'Subtext of item' }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            items: [
-                                {
-                                    image: 'https://primefaces.org/cdn/primeng/images/uikit/uikit-system.png',
-                                    label: 'GET STARTED',
-                                    subtext: 'Build spectacular apps in no time.'
-                                }
+                                { label: 'Theming', routerLink: '/theming' },
+                                { label: 'UI Kit', routerLink: '/uikit' }
                             ]
                         }
                     ]
                 ]
             },
             {
-                label: 'Resources',
-                root: true
+                label: 'Programmatic',
+                icon: 'pi pi-link',
+                command: () => {
+                    this['router'].navigate(['/installation']);
+                }
             },
             {
-                label: 'Contact',
-                root: true
+                label: 'External',
+                icon: 'pi pi-home',
+                items: [
+                    [
+                        {
+                            label: 'External',
+                            items: [
+                                { label: 'Angular', url: 'https://angular.dev/' },
+                                {
+                                    label: 'Vite.js',
+                                    url: 'https://vitejs.dev/'
+                                }
+                            ]
+                        }
+                    ]
+                ]
             }
         ];
     }

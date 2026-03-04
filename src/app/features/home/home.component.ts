@@ -41,6 +41,13 @@ export class HomeComponent {
           this.router.navigate(['/home/page3']);
         },
       },
+      {
+        label: 'chromeDEVtools',
+        icon: 'pi pi-link',
+        command: () => {
+          this.router.navigate(['/home/chromeDEVtools']);
+        },
+      },
     ];
   }
 }

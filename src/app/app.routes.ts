@@ -33,6 +33,13 @@ export const routes: Routes = [
             (m) => m.TestPage3Component,
           ),
       },
+      {
+        path: 'chromeDEVtools',
+        loadComponent: () =>
+          import('./features/users/chrome-dev-tools-mcp/chrome-dev-tools-mcp.component').then(
+            (m) => m.ChromeDevToolsMCPComponent,
+          ),
+      },
     ],
   },
 

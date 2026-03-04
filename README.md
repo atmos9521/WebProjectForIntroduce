@@ -36,6 +36,7 @@ npm install -g @angular/cli
 # 樣式
 
 npm install @primeng/themes
+npm install primeicons
 
 # ============================================
 

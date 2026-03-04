@@ -37,6 +37,7 @@ npm install -g @angular/cli
 
 npm install @primeng/themes
 npm install primeicons
+angular.json "styles":"node_modules/primeicons/primeicons.css",
 
 # ============================================
 

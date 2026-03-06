@@ -7,7 +7,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "buildgit": "ng build --configuration production --output-path docs",
-    "build": "ng build --output-path=docs/cloudflare --base-href=/"
+    "buildDEV": "ng build --configuration dev",
+    "buildPROD": "ng build --configuration prod"
   },
   "private": true,
   "dependencies": {

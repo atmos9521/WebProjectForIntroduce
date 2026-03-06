@@ -24,3 +24,8 @@ src/
       ├── app.component.ts
       ├── app.config.ts
       └── app.routes.ts
+
+
+指令:
+#只建立component
+ng g class environments/environment.prod --type= --skip-tests

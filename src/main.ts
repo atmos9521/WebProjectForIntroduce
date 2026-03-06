@@ -1,8 +1,14 @@
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { providePrimeNG } from 'primeng/config';
 import { AppComponent } from './app/app.component';
 import Lara from '@primeng/themes/lara';
+
+if (environment.production) {
+  enableProdMode();
+}
 
 bootstrapApplication(AppComponent, {
   ...appConfig, // 保留原本 appConfig 裡的設定（如路由、HttpClient等）
@@ -12,9 +18,9 @@ bootstrapApplication(AppComponent, {
       theme: {
         preset: Lara,
         options: {
-          darkModeSelector: false 
-        }
-      }
-    })
-  ]
-}).catch(err => console.error(err));
+          darkModeSelector: false,
+        },
+      },
+    }),
+  ],
+}).catch((err) => console.error(err));

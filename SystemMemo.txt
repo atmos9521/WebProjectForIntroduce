@@ -1,9 +1,11 @@
 src/
  └── app/
-      ├── core/                 # 全域服務 / 攔截器
-      │    ├── services/
-      │    └── guards/
-      │
+      ├── core/                   # 核心模組 (全域單例服務)
+      │   ├── services/
+      │   │   ├── api.service.ts  # 基礎 API 服務 (封裝 get/post 等底層邏輯)
+      │   │   └── auth.service.ts # 使用者驗證
+      │   └── interceptors/       # 攔截器 (處理 Token、錯誤處理)
+      │       └── auth.interceptor.ts
       ├── shared/               # 共用UI與imports
       │    ├── imports/
       │    │     ├── SharedPrimengModule.ts
@@ -29,3 +31,7 @@ src/
 指令:
 #只建立component
 ng g class environments/environment.prod --type= --skip-tests
+
+DB
+#MSSQL連線:
+npm install express mssql cors

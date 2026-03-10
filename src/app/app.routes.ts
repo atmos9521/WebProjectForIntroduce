@@ -4,6 +4,31 @@ export const routes: Routes = [
   // ✅ 預設導向 home
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 
+  // ✅ Album 路由
+  {
+    path: 'Album',
+    loadComponent: () =>
+      import('./features/users/Album/album.component').then(
+        (m) => m.AlbumComponent,
+      ),
+    children: [
+      { path: '', redirectTo: 'Albums', pathMatch: 'full' },
+      {
+        path: 'Albums',
+        loadComponent: () =>
+          import('./features/users/Album/show-albums/show-albums.component').then(
+            (m) => m.ShowAlbumsComponent,
+          ),
+      },
+      {
+        path: 'AlbumUpload',
+        loadComponent: () =>
+          import('./features/users/Album/album-upload/album-upload.component').then(
+            (m) => m.AlbumUploadComponent,
+          ),
+      },
+    ],
+  },
   // ✅ home 路由
   {
     path: 'home',
@@ -24,20 +49,6 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/testPage/test-page-2/test-page-2.component').then(
             (m) => m.TestPage2Component,
-          ),
-      },
-      {
-        path: 'page3',
-        loadComponent: () =>
-          import('./features/testPage/test-page-3/test-page-3.component').then(
-            (m) => m.TestPage3Component,
-          ),
-      },
-      {
-        path: 'chromeDEVtools',
-        loadComponent: () =>
-          import('./features/users/chrome-dev-tools-mcp/chrome-dev-tools-mcp.component').then(
-            (m) => m.ChromeDevToolsMCPComponent,
           ),
       },
     ],

@@ -9,5 +9,5 @@ export const SHARED_IMPORTS: Type<any>[] = [
   CommonModule,
   RouterModule,
   ...PRIMENG_IMPORTS,
-  ...FORM_IMPORTS
+  ...FORM_IMPORTS,
 ];

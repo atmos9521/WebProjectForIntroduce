@@ -1,1 +1,22 @@
 <p>album-upload works!</p>
+
+<div class="card">
+  <h3>檔案上傳</h3>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="onUpload()" [disabled]="!selectedFile">上傳檔案</button>
+</div>
+
+<div class="card">
+  <h3>多檔案上傳</h3>
+  <input type="file" (change)="onFilesSelected($event)" multiple />
+
+  <ul *ngIf="selectedFiles.length > 0">
+    <li *ngFor="let file of selectedFiles">
+      {{ file.name }} ({{ file.size }} bytes)
+    </li>
+  </ul>
+
+  <button (click)="onUpload()" [disabled]="selectedFiles.length === 0">
+    開始上傳
+  </button>
+</div>

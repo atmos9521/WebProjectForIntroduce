@@ -20,4 +20,22 @@ export class ApiService {
     // post<回傳型別>(網址, 資料本體)
     return this.http.post<any>(url, body);
   }
+
+  uploadFile(function_name: string, file: File) {
+    const formData = new FormData();
+    formData.append('func', function_name);
+    formData.append('file', file); // 名稱 'file' 必須與後端參數名一致
+
+    return this.http.post(`http://localhost:5103/api/fileUpload`, formData);
+  }
+
+  uploadMultipleFiles(function_name: string, files: File[]) {
+    const formData = new FormData();
+    formData.append('func', function_name);
+    // 重要：使用相同的 Key ('files') 附加多個檔案
+    files.forEach((file) => {
+      formData.append('files', file);
+    });
+    return this.http.post(`http://localhost:5103/api/fileUpload`, formData);
+  }
 }

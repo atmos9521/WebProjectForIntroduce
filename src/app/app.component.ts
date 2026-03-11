@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // 由DB取得menu
     this.apiService.postMenuData().subscribe((res: any) => {
-      debugger;
       const rawData: SysMenuRaw[] = res.message.result;
       // 開始生成Menu
       this.items = this.transformToTree(rawData);

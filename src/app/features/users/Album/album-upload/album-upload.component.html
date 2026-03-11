@@ -1,12 +1,14 @@
 <p>album-upload works!</p>
 
-<div class="card">
-  <h3>檔案上傳</h3>
+<div class="card car_css">
+  <h3>檔案上傳(單筆)</h3>
   <input type="file" (change)="onFileSelected($event)" />
-  <button (click)="onUpload()" [disabled]="!selectedFile">上傳檔案</button>
+  <p-button (click)="onUpload_single()" [disabled]="!selectedFile"
+    >上傳檔案</p-button
+  >
 </div>
 
-<div class="card">
+<div class="card car_css">
   <h3>多檔案上傳</h3>
   <input type="file" (change)="onFilesSelected($event)" multiple />
 
@@ -16,7 +18,28 @@
     </li>
   </ul>
 
-  <button (click)="onUpload()" [disabled]="selectedFiles.length === 0">
+  <p-button (click)="onUpload_single()" [disabled]="selectedFiles.length === 0">
     開始上傳
-  </button>
+  </p-button>
+</div>
+
+<div class="card car_css">
+  <h3>PrimeNG 檔案上傳</h3>
+  <p-toast />
+  <p-fileupload
+    name="demo[]"
+    maxFileSize="1000000"
+    mode="advanced"
+    chooseLabel="選擇照片"
+    uploadLabel="開始上傳"
+    cancelLabel="全部清空"
+    (onSelect)="onPrimeNGFilesSelected($event)"
+    (uploadHandler)="onUpload_single()"
+    [multiple]="true"
+    [customUpload]="true"
+  >
+    <ng-template #empty>
+      <div>將文件拖放到此處即可上傳。</div>
+    </ng-template>
+  </p-fileupload>
 </div>

@@ -3,13 +3,11 @@ import { Router, RouterOutlet } from '@angular/router';
 import { ApiService } from './core/api.service';
 import { MenuItem } from 'primeng/api';
 import { SHARED_IMPORTS } from './shared/imports/shared.imports';
-import { MegaMenuModule } from 'primeng/megamenu';
-import { AvatarModule } from 'primeng/avatar';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  imports: [RouterOutlet, ...SHARED_IMPORTS, MegaMenuModule, AvatarModule],
+  imports: [RouterOutlet, ...SHARED_IMPORTS],
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {

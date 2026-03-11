@@ -19,6 +19,9 @@ import { CalendarModule } from 'primeng/calendar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { MenubarModule } from 'primeng/menubar';
 import { RippleModule } from 'primeng/ripple';
+import { AvatarModule } from 'primeng/avatar';
+import { FileUploadModule } from 'primeng/fileupload';
+import { MegaMenuModule } from 'primeng/megamenu';
 
 export const PRIMENG_IMPORTS = [
   AutoCompleteModule,
@@ -42,4 +45,7 @@ export const PRIMENG_IMPORTS = [
   RadioButtonModule,
   MenubarModule,
   RippleModule,
+  AvatarModule,
+  FileUploadModule,
+  MegaMenuModule,
 ];

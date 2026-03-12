@@ -2,3 +2,6 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+/* ::ng-deep .my-custom-choose { background: #a855f7 !important; }
+::ng-deep .my-custom-upload { background: #1e3a8a !important; color: blanchedalmond; }
+::ng-deep .my-custom-cancel { background: #c23b4d !important; } */

@@ -1,1 +1,24 @@
 <p>show-albums works!</p>
+<div class="row">
+  <div class="col-12 mt-3">
+    <h3>相簿照片管理</h3>
+    <hr />
+  </div>
+  <div class="col-3">
+    <p-toast [style]="{ marginTop: '80px' }" />
+    <p-tree
+      [value]="files()"
+      [filter]="true"
+      filterMode="strict"
+      filterPlaceholder="Strict Filter"
+      class="w-full md:w-80"
+      selectionMode="single"
+      contextMenuSelectionMode="separate"
+      [(selection)]="selectedNode"
+      [contextMenu]="cm"
+      (onNodeContextMenu)="onRightClick($event)"
+    />
+    <p-contextmenu #cm [model]="items" />
+  </div>
+  <div class="col-9"></div>
+</div>

@@ -22,6 +22,8 @@ import { RippleModule } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
 import { FileUploadModule } from 'primeng/fileupload';
 import { MegaMenuModule } from 'primeng/megamenu';
+import { ContextMenu, ContextMenuModule } from 'primeng/contextmenu';
+import { TreeModule } from 'primeng/tree';
 
 export const PRIMENG_IMPORTS = [
   AutoCompleteModule,
@@ -48,4 +50,7 @@ export const PRIMENG_IMPORTS = [
   AvatarModule,
   FileUploadModule,
   MegaMenuModule,
+  ContextMenu,
+  ContextMenuModule,
+  TreeModule,
 ];

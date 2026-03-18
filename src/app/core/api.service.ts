@@ -38,4 +38,14 @@ export class ApiService {
     });
     return this.http.post(`http://localhost:5103/api/fileUpload`, formData);
   }
+
+  postAlbumGroupData() {
+    const url = 'http://localhost:5103/api/albumGroup';
+
+    // 即使後端不需要參數，POST 規範建議也要傳一個空物件 {}
+    const body = {};
+
+    // post<回傳型別>(網址, 資料本體)
+    return this.http.post<any>(url, body);
+  }
 }

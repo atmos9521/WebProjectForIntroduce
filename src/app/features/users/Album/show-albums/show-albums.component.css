@@ -1,0 +1,13 @@
+/* 使用 ::v-deep 穿透組件封裝 */
+:host ::v-deep {
+  /* 1. 設定預設圖示內容 (pi-folder) */
+  .p-treenode-icon.pi-folder::before {
+    content: "\e92f"; /* pi-folder 的 Unicode */
+  }
+
+  /* 2. 當該列處於「選取狀態」(.p-highlight) 時，強制切換偽元素的內容 */
+  .p-highlight .p-treenode-icon.pi-folder::before {
+    content: "\e930" !important; /* pi-folder-open 的 Unicode */
+    color: #fbc02d; /* 可選：選中時改變資料夾顏色 */
+  }
+}

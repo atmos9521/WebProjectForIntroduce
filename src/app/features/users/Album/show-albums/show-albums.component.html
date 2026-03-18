@@ -10,13 +10,15 @@
       [value]="files()"
       [filter]="true"
       filterMode="strict"
-      filterPlaceholder="Strict Filter"
+      filterPlaceholder="關鍵字篩選"
       class="w-full md:w-80"
       selectionMode="single"
       contextMenuSelectionMode="separate"
       [(selection)]="selectedNode"
       [contextMenu]="cm"
       (onNodeContextMenu)="onRightClick($event)"
+      (onNodeSelect)="nodeSelectOnLeftClick($event)"
+      (onNodeUnselect)="nodeUnselect($event)"
     />
     <p-contextmenu #cm [model]="items" />
   </div>

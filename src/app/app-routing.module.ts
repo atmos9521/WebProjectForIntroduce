@@ -14,6 +14,9 @@ import { routes } from './app.routes';
   exports: [RouterModule]   // 👈 這行很重要
 })
 export class AppRoutingModule {
+
   // 新測試
-  
+
+  ///衝突測試
+
  }

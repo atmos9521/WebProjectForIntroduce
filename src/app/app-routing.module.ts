@@ -13,4 +13,7 @@ import { routes } from './app.routes';
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]   // 👈 這行很重要
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  // 新測試
+  
+ }
